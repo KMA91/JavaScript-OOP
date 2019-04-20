@@ -28,8 +28,17 @@ function Stopwatch(){
   this.reset = function() {
     startTime = 0;
     stopTime = 0;
-    isStarted = false;
   };
+
+  Object.defineProperty(this, 'resetTimer', {
+    set: function() {
+      startTime = 0;
+      stopTime =  0;
+    },
+    writable: false,
+    enumerable: false,
+    configurable: false
+  })
 
   Object.defineProperty(this, 'duration', {
     get: function() {
@@ -42,5 +51,9 @@ function Stopwatch(){
     }
   });
 };
+
+Stopwatch.prototype.start = function() {
+
+}
 
 const sw = new Stopwatch();
