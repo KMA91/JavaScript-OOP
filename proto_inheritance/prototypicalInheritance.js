@@ -37,6 +37,8 @@ Shape.prototype.duplicate = function() {
 Circle.prototype = Object.create(Shape.prototype); // Create an object(Shape) to use as a prototype
 Square.prototype = Object.create(Shape.prototype);
 
+
+
 const circle = new Circle(1);
 const square = new Square();
 

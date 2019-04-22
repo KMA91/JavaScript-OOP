@@ -41,13 +41,14 @@ function HTMLSelectElement(items = []) {
   }
 
   this.render = function() {
-    // let returnEl = "<select>\n";
-    // for( var i = 0; i < this.items.length; i++ ) {
-    //   returnEl += '  <option>' + (this.items[i].toString()) + '</option>\n';
-    // }
-    // returnEl += '</select>';
-    // return returnEl;
+    let returnEl = "<select>\n";
+    for( var i = 0; i < this.items.length; i++ ) {
+      returnEl += '  <option>' + (this.items[i].toString()) + '</option>\n';
+    }
+    returnEl += '</select>';
+    return returnEl;
 
+    // ES6
     return `<select>${this.items.map(item => `
       <option>${item}</option>`).join('')}\n</select>`;
   }

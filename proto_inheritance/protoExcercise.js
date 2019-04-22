@@ -42,7 +42,7 @@ function HTMLSelectElement(items = []) {
 }
 
 // HTMLSelectElement.prototype = Object.create(HTMLElement.prototype); // This will not include the click method
-HTMLSelectElement.prototype = new HTMLElement();
+HTMLSelectElement.prototype = new HTMLElement(); // This will include the click method
 HTMLSelectElement.prototype.constructor = HTMLSelectElement;
 
 const htmlnew1 = new HTMLSelectElement(['1', '2', '3']);
