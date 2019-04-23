@@ -20,3 +20,4 @@ class Circle {
 
 const circle = Circle.parse('{"radius": 1}');
 console.log(circle);
+\
